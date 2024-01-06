@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -47,7 +48,21 @@ class Products extends Component {
     )
   }
 
-  renderFailureView = () => <h1>Failure</h1>
+  renderFailureView = () => (
+    <div className="product-details-error-view-container">
+      <img
+        alt="error view"
+        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
+        className="error-view-image"
+      />
+      <h1 className="product-not-found-heading">Product Not Found</h1>
+      <Link to="/products">
+        <button type="button" className="button">
+          Continue Shopping
+        </button>
+      </Link>
+    </div>
+  )
 
   renderInProgress = () => (
     <div className="loader-container">

@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {FaStar} from 'react-icons/fa'
 import {CiCirclePlus, CiCircleMinus} from 'react-icons/ci'
 import Loader from 'react-loader-spinner'
@@ -77,12 +78,12 @@ class ProductItemDetail extends Component {
             <img src={image} alt={title} />
             <div className="details-container">
               <h1>{title}</h1>
-              <p>{description}</p>
+              <p className="descript">{description}</p>
               <div className="rating-container">
                 <FaStar className="rating-icon" />
                 <p>{rating.rate}</p>
               </div>
-              <p>Rs {Math.round(price)}/- </p>
+              <p className="price-details">Rs {Math.round(price)}/- </p>
               <div className="quantity-container">
                 <button
                   type="button"
@@ -114,7 +115,21 @@ class ProductItemDetail extends Component {
     </CartContext.Consumer>
   )
 
-  renderFailureView = () => <h1>Failure</h1>
+  renderFailureView = () => (
+    <div className="product-details-error-view-container">
+      <img
+        alt="error view"
+        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
+        className="error-view-image"
+      />
+      <h1 className="product-not-found-heading">Product Not Found</h1>
+      <Link to="/products">
+        <button type="button" className="button">
+          Continue Shopping
+        </button>
+      </Link>
+    </div>
+  )
 
   renderInProgress = () => (
     <div className="loader-container">
