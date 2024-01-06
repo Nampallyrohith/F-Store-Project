@@ -12,6 +12,7 @@ import CartContext from './context/CartContext'
 class App extends Component {
   state = {
     cartList: [],
+    checkout: false,
   }
 
   incrementCartItemQuantity = id => {
@@ -77,17 +78,31 @@ class App extends Component {
     this.setState({cartList: []})
   }
 
+  checkoutProcess = () => {
+    const {checkout} = this.state
+    console.log(checkout)
+    this.setState({checkout: !checkout})
+  }
+
+  cartEmpty = () => {
+    const {checkout} = this.state
+    this.setState({checkout: !checkout, cartList: []})
+  }
+
   render() {
-    const {cartList} = this.state
+    const {cartList, checkout} = this.state
     return (
       <CartContext.Provider
         value={{
           cartList,
+          checkout,
           addCartItem: this.addCartItem,
           removeCartItem: this.removeCartItem,
           incrementCartItemQuantity: this.incrementCartItemQuantity,
           decrementCartItemQuantity: this.decrementCartItemQuantity,
           removeAllCartItems: this.removeAllCartItems,
+          checkoutProcess: this.checkoutProcess,
+          cartEmpty: this.cartEmpty,
         }}
       >
         <Switch>

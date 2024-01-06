@@ -76,7 +76,7 @@ class Products extends Component {
       <div>
         <Header />
         <hr />
-        <h1>Our Products</h1>
+        <h1 className="product-heading">Our Products</h1>
         <div>{this.renderProductsView()}</div>
       </div>
     )

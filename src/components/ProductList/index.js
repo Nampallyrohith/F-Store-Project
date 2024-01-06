@@ -18,7 +18,7 @@ const ProductList = props => {
             <FaStar className="rating-icon" />
             <p>{rating.rate}</p>
           </div>
-          <p className="price">Rs {price}/- </p>
+          <p className="price">Rs {Math.round(price)}/- </p>
         </div>
       </Link>
     </li>

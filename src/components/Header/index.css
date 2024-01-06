@@ -11,6 +11,7 @@ nav div h1 {
   font-size: 40px;
   font-family: 'caveat';
   font-weight: bold;
+  margin-left: 40px;
 }
 
 nav ul {
@@ -19,7 +20,7 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
-  margin-right: 40px;
+  margin-right: 60px;
   text-decoration: none;
 }
 
@@ -29,4 +30,19 @@ nav ul li {
   text-decoration: none;
   font-size: 25px;
   font-weight: bold;
+  color: black;
+}
+
+.cart-count-badge {
+  background-color: #bfdbfe;
+  color: #0967d2;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-left: 8px;
 }

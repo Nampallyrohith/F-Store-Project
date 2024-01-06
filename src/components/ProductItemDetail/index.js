@@ -82,7 +82,7 @@ class ProductItemDetail extends Component {
                 <FaStar className="rating-icon" />
                 <p>{rating.rate}</p>
               </div>
-              <p>Rs {price}/- </p>
+              <p>Rs {Math.round(price)}/- </p>
               <div className="quantity-container">
                 <button
                   type="button"
