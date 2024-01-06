@@ -1,0 +1,30 @@
+.checkout-container {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  line-height: 1px;
+}
+
+.checkout-container h1 {
+  color: #616e7c;
+  font-size: 30px;
+}
+
+.checkout-container h1 span {
+  color: #171f46;
+}
+
+.checkout-container p {
+  color: #616e7c;
+  font-size: 18px;
+}
+
+.checkout-btn {
+  background-color: #0b69ff;
+  color: white;
+  border-width: 0px;
+  border-radius: 8px;
+  height: 40px;
+  width: 100px;
+  align-self: stretch;
+}
